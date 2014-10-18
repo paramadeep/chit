@@ -469,7 +469,7 @@ input[type="button"] {
 }
 
 .btn-primary:active .badge-inverted,
-.btn-positive:active .badge-inverted,
+.btn-positive:active .badge-inverted,fz......................
 .btn-negative:active .badge-inverted {
   color: #fff;
 }

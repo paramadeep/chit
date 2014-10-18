@@ -1,5 +1,27 @@
-img.header {
-    width: 200px;
-    height: 200px;
-    margin: 40 auto;
+div.header {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 40%; 
+    margin-left: -150px;
+    margin-top: -150px;
+    background: url("../img/chit.png");
+    background-size: 100%;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    -khtml-border-radius: 30px;
+    -webkit-border-radius: 30px;
+}
+
+.buttons {
+    position:absolute;
+    top: 50%;
+    margin-top: 100px;
+    margin-left: -110px;
+    left: 50%;
+}
+
+.main-nav {
+    width: 220px;
 }
