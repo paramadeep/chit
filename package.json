@@ -2,8 +2,9 @@
   "name": "chit",
   "version": "0.0.0",
   "description": "chit made easy",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "nodemon ./server/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,13 @@
   },
   "homepage": "https://github.com/paramadeep/chit",
   "dependencies": {
-    "express": "^4.9.8",
-    "nodemon": "^1.2.1"
+    "body-parser": "~1.8.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "express": "~4.9.8",
+    "jade": "~1.6.0",
+    "morgan": "~1.3.0",
+    "nodemon": "^1.2.1",
+    "serve-favicon": "~2.1.3"
   }
 }
