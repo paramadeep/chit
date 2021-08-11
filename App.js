@@ -10,6 +10,7 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import Header from './src/components/Header';
+import AddChit from './src/components/AddChit';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,6 +25,7 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <AddChit />
       </ScrollView>
     </SafeAreaView>
   );

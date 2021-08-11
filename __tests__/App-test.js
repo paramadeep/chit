@@ -8,4 +8,5 @@ import {render} from '@testing-library/react-native';
 it('Has Chits displayed', () => {
   const {getByText} = render(<App />);
   expect(getByText(/^Chits$/)).toBeEnabled();
+  expect(getByText(/^\+ New Chit$/)).toBeEnabled();
 });
