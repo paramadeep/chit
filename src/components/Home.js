@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 import AddChitButton from './AddChitButton';
+import Chits from './Chits';
 
 const Home = ({navigation}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -20,6 +21,7 @@ const Home = ({navigation}) => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <AddChitButton gotoAddChit={gotoAddChit} />
+        <Chits />
       </ScrollView>
     </SafeAreaView>
   );

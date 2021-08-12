@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Text, TextInput, Button} from 'react-native';
+import {ChitsContext} from '../contexts/ChitsContext';
 import DatePicker from './DatePicker';
 
-const NewChit = ({navigation, route}) => {
+const NewChit = ({navigation}) => {
   const [chitName, setChitName] = useState('');
   const [startDate, setStartDate] = useState(new Date());
+  const [, addChit] = useContext(ChitsContext);
   const saveChit = () => {
     if (chitName) {
-      // route.params.addChit({chitName, startDate});
+      addChit({chitName, startDate});
       navigation.goBack();
     }
   };
