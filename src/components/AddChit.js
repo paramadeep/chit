@@ -10,10 +10,7 @@ const AddChit = () => {
 };
 
 const styles = StyleSheet.create({
-  newChit: {
-    borderRadius: 40,
-    padding: 20,
-  },
+  newChit: {},
 });
 
 export default AddChit;
