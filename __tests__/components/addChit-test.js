@@ -1,9 +1,9 @@
 import 'react-native';
 import React from 'react';
 import {render} from '@testing-library/react-native';
-import AddChit from '../../src/components/AddChit';
+import AddChitButton from '../../src/components/AddChitButton';
 
 test('Has Chits displayed', () => {
-  const {getByText} = render(<AddChit />);
+  const {getByText} = render(<AddChitButton />);
   expect(getByText(/^\+ New Chit$/)).toBeEnabled();
 });

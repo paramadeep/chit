@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -6,19 +6,20 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import AddChit from './AddChit';
+import AddChitButton from './AddChitButton';
 
 const Home = ({navigation}) => {
   const isDarkMode = useColorScheme() === 'dark';
-  const gotoAddChit = ()=> {
-    navigation.navigate('New Chit')
-  }
+
+  const gotoAddChit = useCallback(() => {
+    navigation.navigate('New Chit');
+  }, [navigation]);
 
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <AddChit gotoAddChit={gotoAddChit} />
+        <AddChitButton gotoAddChit={gotoAddChit} />
       </ScrollView>
     </SafeAreaView>
   );
