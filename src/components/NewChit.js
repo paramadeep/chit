@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import {Text, TextInput, Button} from 'react-native';
 import {ChitsContext} from '../contexts/ChitsContext';
+import chitModel from '../model/chit';
 import DatePicker from './DatePicker';
 
 const NewChit = ({navigation}) => {
@@ -12,7 +13,14 @@ const NewChit = ({navigation}) => {
   const {addChit} = useContext(ChitsContext);
   const saveChit = () => {
     if (name) {
-      addChit({name, amount, installments, startDate, intervels});
+      const chit = chitModel.newChit(
+        name,
+        amount,
+        installments,
+        intervels,
+        startDate,
+      );
+      addChit(chit);
       navigation.goBack();
     }
   };

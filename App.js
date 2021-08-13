@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import Home from './src/components/Home';
 import NewChit from './src/components/NewChit';
+import DetailedChit from './src/components/DetailedChit';
 import {ChitsProvider} from './src/contexts/ChitsContext';
 
 const Stack = createStackNavigator();
@@ -16,6 +17,7 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Chits" component={Home} />
           <Stack.Screen name="New Chit" component={NewChit} />
+          <Stack.Screen name="Chit" component={DetailedChit} />
         </Stack.Navigator>
       </NavigationContainer>
     </ChitsProvider>

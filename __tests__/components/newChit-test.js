@@ -44,6 +44,6 @@ test('save new chit add it to the context', () => {
   expect(addChit.mock.calls[0][0].startDate.toDateString()).toBe(
     new Date().toDateString(),
   );
-  expect(addChit.mock.calls[0][0].installments).toBe('3');
-  expect(addChit.mock.calls[0][0].intervels).toBe('4');
+  expect(addChit.mock.calls[0][0].installmentCount).toBe('3');
+  expect(addChit.mock.calls[0][0].intervelInMonths).toBe('4');
 });
