@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import {Text} from 'react-native';
 import {ChitsContext} from '../contexts/ChitsContext';
 import Chit from './Chit';
 

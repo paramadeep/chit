@@ -9,6 +9,7 @@ test('Validate Field Displayed', () => {
   expect(getByText(/^Chit Name : $/)).toBeEnabled();
   expect(getByText(/^Start Date : $/)).toBeEnabled();
   expect(getByText(/^Amount : $/)).toBeEnabled();
+  expect(getByText(/^No. Of Installments : $/)).toBeEnabled();
   expect(getByText(/^Save$/)).toBeEnabled();
 });
 
@@ -29,11 +30,13 @@ test('save new chit add it to the context', () => {
   const wrapper = ({children}) => (
     <ChitsContext.Provider value={{addChit}}>{children}</ChitsContext.Provider>
   );
-  const {getByText, getByTestId} = render(<NewChit navigation={navigation} />, {
+  const {getByText, getByPlaceholderText} = render(<NewChit navigation={navigation} />, {
     wrapper,
   });
-  fireEvent.changeText(getByTestId('name'), 'Name');
-  fireEvent.changeText(getByTestId('amount'), '123');
+  fireEvent.changeText(getByPlaceholderText('Enter Chit Name'), 'Name');
+  fireEvent.changeText(getByPlaceholderText('Enter Amount'), '123');
+  fireEvent.changeText(getByPlaceholderText('Enter no. of installments'), '3');
+  fireEvent.changeText(getByPlaceholderText('Enter no. of months'), '4');
   fireEvent.press(getByText(/^Save$/));
   expect(addChit.mock.calls.length).toBe(1);
   expect(addChit.mock.calls[0][0].name).toBe('Name');
@@ -41,4 +44,6 @@ test('save new chit add it to the context', () => {
   expect(addChit.mock.calls[0][0].startDate.toDateString()).toBe(
     new Date().toDateString(),
   );
+  expect(addChit.mock.calls[0][0].installments).toBe('3');
+  expect(addChit.mock.calls[0][0].intervels).toBe('4');
 });

@@ -6,11 +6,13 @@ import DatePicker from './DatePicker';
 const NewChit = ({navigation}) => {
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
+  const [installments, setInstallments] = useState('');
+  const [intervels, setIntervels] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const {addChit} = useContext(ChitsContext);
   const saveChit = () => {
     if (name) {
-      addChit({name, amount, startDate});
+      addChit({name, amount, installments, startDate, intervels});
       navigation.goBack();
     }
   };
@@ -29,6 +31,22 @@ const NewChit = ({navigation}) => {
         placeholder="Enter Amount"
         onChangeText={setAmount}
         value={amount}
+        keyboardType="number-pad"
+      />
+      <Text>No. Of Installments : </Text>
+      <TextInput
+        testID="installments"
+        placeholder="Enter no. of installments"
+        onChangeText={setInstallments}
+        value={installments}
+        keyboardType="number-pad"
+      />
+      <Text>Intervel in Months : </Text>
+      <TextInput
+        testID="intervels"
+        placeholder="Enter no. of months"
+        onChangeText={setIntervels}
+        value={intervels}
         keyboardType="number-pad"
       />
       <Text>Start Date : </Text>
