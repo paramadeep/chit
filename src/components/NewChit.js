@@ -4,12 +4,12 @@ import {ChitsContext} from '../contexts/ChitsContext';
 import DatePicker from './DatePicker';
 
 const NewChit = ({navigation}) => {
-  const [chitName, setChitName] = useState('');
+  const [name, setName] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const {addChit} = useContext(ChitsContext);
   const saveChit = () => {
-    if (chitName) {
-      addChit({chitName, startDate});
+    if (name) {
+      addChit({name, startDate});
       navigation.goBack();
     }
   };
@@ -18,8 +18,8 @@ const NewChit = ({navigation}) => {
       <Text>Chit Name : </Text>
       <TextInput
         placeholder="Enter Chit Name"
-        onChangeText={setChitName}
-        value={chitName}
+        onChangeText={setName}
+        value={name}
       />
       <Text>Start Date : </Text>
       <DatePicker date={startDate} onChange={setStartDate} />
