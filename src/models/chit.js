@@ -2,8 +2,9 @@ import {getDeviceId} from '../services/deviceInfo';
 
 const chitModel = {
   newChit: (name, amount, installmentCount, intervelInMonths, startDate) => {
-    const id = new Date().getMilliseconds() + getDeviceId();
     const creationTime = new Date();
+    const id = `${getDeviceId()}-${creationTime.getMilliseconds()}`;
+
     return {
       id,
       name,
