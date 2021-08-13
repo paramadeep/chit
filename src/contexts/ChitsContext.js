@@ -1,5 +1,5 @@
 import React, {useState, createContext} from 'react';
-import chitsModel from '../model/chits';
+import chitsModel from '../models/chits';
 import {newChit} from '../../testData';
 
 export const ChitsContext = createContext();

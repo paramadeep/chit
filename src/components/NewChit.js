@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import {Text, TextInput, Button} from 'react-native';
 import {ChitsContext} from '../contexts/ChitsContext';
-import chitModel from '../model/chit';
+import chitModel from '../models/chit';
 import DatePicker from './DatePicker';
 
 const NewChit = ({navigation}) => {

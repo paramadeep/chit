@@ -16,12 +16,16 @@ const Home = ({navigation}) => {
     navigation.navigate('New Chit');
   }, [navigation]);
 
+  const gotoDetailedChit = useCallback(() => {
+    navigation.navigate('Chit', {});
+  }, [navigation]);
+
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <AddChitButton gotoAddChit={gotoAddChit} />
-        <Chits />
+        <Chits gotoDetailedChit={gotoDetailedChit} />
       </ScrollView>
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-import chitModel from '../../src/model/chit';
+import chitModel from '../../src/models/chit';
 import {newChit, today} from '../../testData';
 
 test('able to add new chit', () => {
