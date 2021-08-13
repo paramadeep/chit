@@ -5,11 +5,12 @@ import DatePicker from './DatePicker';
 
 const NewChit = ({navigation}) => {
   const [name, setName] = useState('');
+  const [amount, setAmount] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const {addChit} = useContext(ChitsContext);
   const saveChit = () => {
     if (name) {
-      addChit({name, startDate});
+      addChit({name, amount, startDate});
       navigation.goBack();
     }
   };
@@ -17,9 +18,18 @@ const NewChit = ({navigation}) => {
     <>
       <Text>Chit Name : </Text>
       <TextInput
+        testID="name"
         placeholder="Enter Chit Name"
         onChangeText={setName}
         value={name}
+      />
+      <Text>Amount : </Text>
+      <TextInput
+        testID="amount"
+        placeholder="Enter Amount"
+        onChangeText={setAmount}
+        value={amount}
+        keyboardType="number-pad"
       />
       <Text>Start Date : </Text>
       <DatePicker date={startDate} onChange={setStartDate} />
