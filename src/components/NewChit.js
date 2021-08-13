@@ -6,7 +6,7 @@ import DatePicker from './DatePicker';
 const NewChit = ({navigation}) => {
   const [chitName, setChitName] = useState('');
   const [startDate, setStartDate] = useState(new Date());
-  const [, addChit] = useContext(ChitsContext);
+  const {addChit} = useContext(ChitsContext);
   const saveChit = () => {
     if (chitName) {
       addChit({chitName, startDate});

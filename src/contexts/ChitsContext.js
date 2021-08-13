@@ -7,7 +7,7 @@ export const ChitsProvider = ({children}) => {
   const addChit = chit => setChits(prevChits => [...prevChits, chit], []);
 
   return (
-    <ChitsContext.Provider value={[chits, addChit]}>
+    <ChitsContext.Provider value={{chits, addChit}}>
       {children}
     </ChitsContext.Provider>
   );
