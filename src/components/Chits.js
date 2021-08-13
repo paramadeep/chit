@@ -7,7 +7,7 @@ const Chits = () => {
   return (
     <>
       {chits.map(chit => (
-        <Chit chit={chit} />
+        <Chit chit={chit} key={chit.creationTime} />
       ))}
     </>
   );

@@ -1,9 +1,14 @@
 const chitModel = {
   newChit: (name, amount, installmentCount, intervelInMonths, startDate) => {
-    return {name, amount, installmentCount, intervelInMonths, startDate};
-  },
-  updateIndex: (chit, index) => {
-    chit.index = index;
+    const creationTime = new Date().getMilliseconds();
+    return {
+      name,
+      amount,
+      installmentCount,
+      intervelInMonths,
+      startDate,
+      creationTime,
+    };
   },
 };
 
