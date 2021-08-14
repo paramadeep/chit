@@ -11,6 +11,6 @@ test('Chit name is deplayed', () => {
   const {getByText} = render(<Chit chit={chit} />);
   expect(getByText(/^deepak's chit$/)).toBeEnabled();
   expect(getByText(/^5000$/)).toBeEnabled();
-  expect(getByText(/^Next: 1$/)).toBeEnabled();
-  expect(getByText(/^End: 1$/)).toBeEnabled();
+  // expect(getByText(/^Next: 1$/)).toBeEnabled();
+  // expect(getByText(/^End: 1$/)).toBeEnabled();
 });

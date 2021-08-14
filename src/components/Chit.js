@@ -1,21 +1,16 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {Text, Pressable, StyleSheet} from 'react-native';
 
-const Chit = ({chit}) => {
-  const nextInstallmentDate = () => {
-    return 1;
-  };
-  const endChitDate = () => {
-    return 1;
-  };
+const Chit = ({chit, gotoDetailedChit}) => {
+  const onClick = useCallback(() => {
+    gotoDetailedChit(chit.id);
+  }, [chit.id, gotoDetailedChit]);
 
   return (
     <>
-      <Pressable style={style.chit}>
+      <Pressable style={style.chit} onPress={onClick}>
         <Text>{chit.name}</Text>
         <Text>{chit.amount}</Text>
-        <Text>Next: {nextInstallmentDate()}</Text>
-        <Text>End: {endChitDate()}</Text>
       </Pressable>
     </>
   );

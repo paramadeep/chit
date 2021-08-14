@@ -30,9 +30,12 @@ test('save new chit add it to the context', () => {
   const wrapper = ({children}) => (
     <ChitsContext.Provider value={{addChit}}>{children}</ChitsContext.Provider>
   );
-  const {getByText, getByPlaceholderText} = render(<NewChit navigation={navigation} />, {
-    wrapper,
-  });
+  const {getByText, getByPlaceholderText} = render(
+    <NewChit navigation={navigation} />,
+    {
+      wrapper,
+    },
+  );
   fireEvent.changeText(getByPlaceholderText('Enter Chit Name'), 'Name');
   fireEvent.changeText(getByPlaceholderText('Enter Amount'), '123');
   fireEvent.changeText(getByPlaceholderText('Enter no. of installments'), '3');

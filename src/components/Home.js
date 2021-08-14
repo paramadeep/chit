@@ -16,9 +16,12 @@ const Home = ({navigation}) => {
     navigation.navigate('New Chit');
   }, [navigation]);
 
-  const gotoDetailedChit = useCallback(() => {
-    navigation.navigate('Chit', {});
-  }, [navigation]);
+  const gotoDetailedChit = useCallback(
+    chitId => {
+      navigation.navigate('Chit', {chitId});
+    },
+    [navigation],
+  );
 
   return (
     <SafeAreaView>
