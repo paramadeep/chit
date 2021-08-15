@@ -1,19 +1,17 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {Text, Pressable, StyleSheet} from 'react-native';
+import {Text, Pressable, StyleSheet, Button} from 'react-native';
 import {ChitsContext} from '../contexts/ChitsContext';
 import chitsModel from '../models/chits';
 
-const DetailedChit = ({navigation, route}) => {
+const DetailedChit = ({route}) => {
   const {chits} = useContext(ChitsContext);
-  const [chit, setChit] = useState();
-  useEffect(() => {
-    const chitById = chitsModel.getById(chits, route.params.chitId);
-    setChit(chitById);
-  }, [chits, route]);
+  const chit = chitsModel.getById(chits, route.params.chitId);
   return (
     <>
       <Text>{chit.name}</Text>
       <Text>{chit.amount}</Text>
+      <Text>{chit.intervelInMonths} Month</Text>
+      <Button title="Add Installment" />
     </>
   );
 };

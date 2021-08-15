@@ -1,6 +1,6 @@
 import React, {useState, createContext} from 'react';
 import chitsModel from '../models/chits';
-import {newChit} from '../../testData';
+import {newChit} from '../../testData/chit';
 
 export const ChitsContext = createContext();
 

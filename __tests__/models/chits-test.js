@@ -1,5 +1,5 @@
 import chitsModel from '../../src/models/chits';
-import {newChit} from '../../testData';
+import {newChit} from '../../testData/chit';
 
 const newChits = () => {
   const chit1 = newChit();

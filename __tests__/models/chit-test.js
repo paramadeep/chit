@@ -1,5 +1,4 @@
-import chitModel from '../../src/models/chit';
-import {newChit, today} from '../../testData';
+import {newChit, today} from '../../testData/chit';
 
 test('able to add new chit', () => {
   const chit = newChit();
