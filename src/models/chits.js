@@ -3,7 +3,8 @@ const chitsModel = {
     return [...chits, chit];
   },
   getById: (chits, id) => {
-    return chits.find(chit => chit.id === id);
+    const foundChit = chits.find(chit => chit.id === id);
+    return foundChit ? {...foundChit} : null;
   },
 };
 

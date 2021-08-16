@@ -24,5 +24,5 @@ test('return chit by id', () => {
 test('getById return null in absence matching id', () => {
   const chits = newChits();
   const filteredChit = chitsModel.getById(chits, 3);
-  expect(filteredChit).toBeUndefined();
+  expect(filteredChit).toBeNull();
 });
