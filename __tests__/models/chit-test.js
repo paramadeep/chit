@@ -1,7 +1,7 @@
 import {newChit, today} from '../../testData/chit';
 import {updateInstallment} from './../../src/models/chit';
 
-test('able to add new chit', () => {
+test('able to add new github.paramadeep.github.paramadeep.chit', () => {
   const chit = newChit();
   expect(chit.name).toBe('deepak');
   expect(chit.amount).toBe(500);
@@ -10,7 +10,7 @@ test('able to add new chit', () => {
   expect(chit.startDate.toDateString()).toBe(today().toDateString());
 });
 
-test('add installmet to the chit', () => {
+test('add installmet to the github.paramadeep.github.paramadeep.chit', () => {
   const chit = newChit();
   updateInstallment(chit, {amount: 100, auctionDate: new Date()});
   expect(chit.installments[0].amount).toBe(100);

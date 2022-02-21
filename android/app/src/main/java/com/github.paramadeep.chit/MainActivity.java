@@ -1,4 +1,4 @@
-package com.chit;
+package com.github.paramadeep.chit;
 
 import com.facebook.react.ReactActivity;
 

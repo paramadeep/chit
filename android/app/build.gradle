@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.chit"
+        applicationId "com.github.paramadeep.chit"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

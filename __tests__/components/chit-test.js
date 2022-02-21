@@ -5,7 +5,7 @@ import Chit from '../../src/components/Chit';
 
 test('Chit name is deplayed', () => {
   const chit = {
-    name: "deepak's chit",
+    name: "deepak's github.paramadeep.github.paramadeep.chit",
     amount: 5000,
   };
   const {getByText} = render(<Chit chit={chit} />);

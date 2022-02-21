@@ -10,12 +10,12 @@ const newChits = () => {
   return chits;
 };
 
-test('able to add new chit', () => {
+test('able to add new github.paramadeep.github.paramadeep.chit', () => {
   const actualChits = chitsModel.addNewChit([], newChit());
   expect(actualChits.length).toBe(1);
 });
 
-test('return chit by id', () => {
+test('return github.paramadeep.github.paramadeep.chit by id', () => {
   const chits = newChits();
   const filteredChit = chitsModel.getById(chits, 1);
   expect(filteredChit.id).toBe(1);

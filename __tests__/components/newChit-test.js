@@ -13,7 +13,7 @@ test('Validate Field Displayed', () => {
   expect(getByText(/^Save$/)).toBeEnabled();
 });
 
-test('add new chit navigates back', () => {
+test('add new github.paramadeep.github.paramadeep.chit navigates back', () => {
   const navigation = {};
   navigation.goBack = jest.fn();
   const {getByText, getByTestId} = render(<NewChit navigation={navigation} />, {
@@ -24,7 +24,7 @@ test('add new chit navigates back', () => {
   expect(navigation.goBack.mock.calls.length).toBe(1);
 });
 
-test('save new chit add it to the context', () => {
+test('save new github.paramadeep.github.paramadeep.chit add it to the context', () => {
   const navigation = {goBack: () => {}};
   const addChit = jest.fn();
   const wrapper = ({children}) => (
